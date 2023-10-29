@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// import { Fragment } from 'react';
+import { Fragment } from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import { useState } from 'react';
+import AuthModal from './components/MyModal';
+// import Navigation from './components/Navigation';
+import LogInForm from './forms/LogInForm';
 
 function App() {
+
+  const [modalShow, setModalShow] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {/* <Navigation /> */}
+      <AuthModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        logFormComponent={LogInForm}
+        modalHeading="Make Love❤️ Happen, Sign Up Now !" 
+      />
+      <Header onJoinClick={() => setModalShow(true)} />
+      <Main />
+    </Fragment>
   );
 }
 

@@ -1,0 +1,19 @@
+.nav-item .nav-link{
+    color: #ffffff;
+}
+
+.fs-larger {
+    font-size: larger;
+}
+
+/* .nav-item .nav-link:focus {
+    color: red; Customize the color you want
+    text-decoration: underline;
+} */
+  
+  /* Change the color on active (click) */
+
+  .nav-item .nav-link:hover {
+    color: #f8aa00; /*Customize the color you want*/
+    /* text-decoration: underline; */
+}
