@@ -39,8 +39,8 @@ const Header = (props) => {
             <Navigation LogInHandler={props.onJoinClick}/>
             <div style={middleDivHeader} >
                 <div className='d-flex justify-content-around w-50'>
-                    <button className='btn px-lg-4 py-lg-2 px-sm-2 py-sm-1 px-2 py-2 border-3 me-lg-0 me-4 btn-light border-danger fw-medium'>Seeker</button>
-                    <button className='btn px-lg-4 py-lg-2 px-sm-2 py-sm-1 px-2 py-2 border-2 ms-lg-0 ms-4  border-light btn-danger text-light fw-medium'>Wanna Date</button>
+                    <button onClick={props.onJoinClick} className='btn px-lg-4 py-lg-2 px-sm-2 py-sm-1 px-2 py-2 border-3 me-lg-0 me-4 btn-light border-danger fw-medium'>Seeker</button>
+                    <button onClick={props.onJoinClick} className='btn px-lg-4 py-lg-2 px-sm-2 py-sm-1 px-2 py-2 border-2 ms-lg-0 ms-4  border-light btn-danger text-light fw-medium'>Wanna Date</button>
                 </div>
                 <p style={{textAlign:"center",marginTop:"1rem",color:"#ffffff",fontWeight:"500"}}>Falling in Love Starts with Us – Join the Romance Revolution!
                 </p>
