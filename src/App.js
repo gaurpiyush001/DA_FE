@@ -17,8 +17,8 @@ function App() {
       <AuthModal
         show={modalShow}
         onHide={() => setModalShow(false)}
-        logFormComponent={LogInForm}
-        modalHeading="Make Love❤️ Happen, Sign Up Now !" 
+        // logformcomponent={LogInForm}
+        modalheading="Make Love❤️ Happen, Sign Up Now !" 
       />
       <Header onJoinClick={() => setModalShow(true)} />
       <Main />

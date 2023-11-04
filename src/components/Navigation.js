@@ -64,8 +64,8 @@ const Navigation = (props) => {
                 </a>
                 {/* toggle button for mobile nav  */}
                 <button className="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expands="false" aria-labels="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
                 {/* aria-controls="main-nav"
