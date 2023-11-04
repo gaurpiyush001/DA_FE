@@ -1,10 +1,11 @@
 import classes from './Header.css'
 import Navigation from './Navigation';
+import BgImage from './../utils/bright_sunflower_forehead.jpg' //not to be deployed on prod
 
 const Header = (props) => {
 
     const backgroundStyle = {
-        backgroundImage: `url('./assets/bright_sunflower_forehead.jpg')`,
+        backgroundImage: `url(${BgImage})`, //image fix on local
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
