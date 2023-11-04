@@ -1,32 +1,35 @@
 import { authActions } from "../reducers/auth-slice";
 import axios from 'axios';
-axios.defaults.withCredentials = true
+// axios.defaults.withCredentials = true
 
-export const authSignUp = ({ email, password, confirmPassword, name }) => {
+export const authSignUp = ({ email, password }) => {
   return async (dispatch) => {
     try {
       const config = {
         header: {
+          // "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+          "Access-Control-Allow-Headers": "application/json",
           'Content-type': 'application/json',
-          withCredentials: true
+          // withCredentials: true
         },
       }
 
-      console.log('ARRRRA HAIII', email, password, confirmPassword, name)
+      console.log('ARRRRA HAIII', email, password)
 
       // dispatch({ type: SIGNUP_GET_REQUEST })
       const { data } = await axios.post(
-        `http://localhost:3001/api/v1/signup`,
-        { email, password, confirmPassword, name },
+        `http://localhost:8082/dating-service/register?email=${email}&hashedPass=${password}`,
         config
       )
 
-      console.log('dataaaaaaaaa->', data);
-      const finaldata = data.data.user;
+      console.log('token->', data);
+      // const finaldata = data.data.user;
 
-      dispatch(authActions.logInSuccess(finaldata));
+      dispatch(authActions.logInSuccess(data));
 
-      localStorage.setItem('user', JSON.stringify(finaldata));
+      localStorage.setItem('user', JSON.stringify(data));
 
 
     } catch (error) {
