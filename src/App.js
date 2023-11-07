@@ -6,6 +6,7 @@ import { useState } from 'react';
 import AuthModal from './components/MyModal';
 // import Navigation from './components/Navigation';
 import LogInForm from './forms/LogInForm';
+import UserProfile from './pages/UserProfile';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
         // logformcomponent={LogInForm}
         modalheading="Make Love❤️ Happen, Sign Up Now !" 
       />
-      <Header onJoinClick={() => setModalShow(true)} />
+      {/* <Header onJoinClick={() => setModalShow(true)} /> */}
+      <UserProfile />
       <Main />
     </Fragment>
   );
